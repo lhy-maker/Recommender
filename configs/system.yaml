@@ -1,0 +1,21 @@
+# configs/system.yaml
+components:
+  data_processor:
+    text_encoder: "bert-base-chinese"
+    image_size: 512
+    
+  diffusion:
+    topk: 100
+    guidance_scale: 3.0
+    
+  llm:
+    batch_size: 4
+    
+  fusion:
+    strategy: "hybrid"
+    
+system:
+  topk: 10                  # 最终推荐数量
+  fallback_topk: 5          # 降级推荐数量
+  profile_ttl: 3600         # 用户画像缓存时间(秒)
+  retrain_interval: 86400   # 模型重训练间隔(秒)

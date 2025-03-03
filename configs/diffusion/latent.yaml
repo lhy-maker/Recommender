@@ -1,0 +1,28 @@
+# configs/diffusion/latent.yaml
+model_type: latent
+
+params:
+  steps: 100                        # 扩散步数
+  sampler: ddim                     # 采样器类型
+  guidance_scale: 7.5               # 分类器指导强度
+  latent_dim: 768                   # 潜在空间维度
+  conditioning: multimodal          # 条件输入类型
+
+optimization:
+  batch_size: 16
+  chunk_size: 4                     # 分块处理大小
+  use_xformers: true                # 启用内存优化
+
+device: cuda:0
+model_path: "./pretrained/diffusion_model.pth"
+index_path: "./processed/news_features.npy"
+
+scheduler:
+  beta_start: 0.0001
+  beta_end: 0.02
+  num_train_timesteps: 1000
+
+generation:
+  default_topk: 100
+  min_similarity: 0.6
+  max_retries: 3

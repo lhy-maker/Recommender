@@ -1,0 +1,11 @@
+# configs/fusion.yaml
+weights:
+  semantic: 0.6
+  collaborative: 0.3
+  diversity: 0.05
+  freshness: 0.05
+
+diversity:
+  enabled: true
+  lambda: 0.7  # 多样性控制强度
+  max_retries: 3

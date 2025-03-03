@@ -1,0 +1,14 @@
+# configs/data/mind.yaml
+dataset:
+  name: "MIND"
+  version: "v2.0"
+  
+paths:
+  raw: "./data/mind/raw"
+  processed: "./data/mind/processed"
+  images: "./data/mind/images"
+  
+features:
+  text_encoder: "bert-base-chinese"
+  image_size: 512
+  max_history: 50                   # 最大历史序列长度

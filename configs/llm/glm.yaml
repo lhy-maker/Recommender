@@ -1,0 +1,22 @@
+# configs/llm/glm.yaml
+model_name: "chatglm3"
+model_path: "THUDM/chatglm3-6b"
+
+generation:
+  max_length: 512
+  max_new_tokens: 256
+  temperature: 0.7
+  top_p: 0.9
+  repetition_penalty: 1.2
+
+adaptation:
+  system_prompt: >
+    你是一个专业的内容推荐助手，需要根据用户画像生成自然流畅的推荐理由。
+    要求：结合物品特征和用户兴趣点，使用口语化表达。
+
+
+# configs/llm/glm.yaml
+
+quantized: true
+
+template_dir: "./configs/prompts/"

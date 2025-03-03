@@ -1,0 +1,13 @@
+# configs/base.yaml
+defaults:
+  - env: dev
+  - data: mind
+  - diffusion: latent
+  - llm: glm
+
+system:
+  log_dir: ./logs
+  cache_dir: ./cache
+  device: cuda
+  precision: fp16
+  seed: 42

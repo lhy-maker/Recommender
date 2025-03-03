@@ -1,0 +1,21 @@
+# 评估指标配置
+metrics:
+  accuracy:
+    topk_list: [5, 10, 20]
+    weight: 0.6
+  diversity:
+    intra_weight: 0.3
+    inter_weight: 0.7
+  coverage:
+    catalog_size: 100000
+    
+# 数据配置
+data:
+  test_path: "./data/test/interactions.csv"
+  embeddings_path: "./processed/item_embeddings.npy"
+
+# 实验参数
+experiment:
+  max_topk: 50
+  num_users: 10000
+  parallel_workers: 8

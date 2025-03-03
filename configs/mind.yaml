@@ -1,0 +1,10 @@
+# configs/mind.yaml
+data:
+  path: "./MINDlarge_train"
+  processed_path: "./processed"
+  
+text_encoder:
+  name: "bert-base-chinese"
+
+system:
+  device: "cuda:0"
